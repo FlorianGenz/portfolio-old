@@ -1,0 +1,258 @@
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .innerContentWrapper {
+    width: 60%;
+    height: 60%;
+    border-radius: 50px;
+    padding: 40px;
+    position: relative;
+    z-index: 2;
+
+    .border {
+      position: absolute;
+      width: 30%;
+      height: 30%;
+      display: block;
+      pointer-events: none;
+      border-radius: var(--borderSize);
+      z-index: -1;
+      background: var(--colorGradient);
+      background-size: 300% 300%;
+      animation: gradientAnimation 5s infinite alternate;
+    }
+
+    .borderTopLeft {
+      margin-left: calc(var(--borderSize) * -1);
+      margin-top: calc(var(--borderSize) * -1);
+      top: 0;
+      left: 0;
+    }
+
+    .borderTopLeft:after {
+      content: "";
+      position: absolute;
+      top: var(--borderSize);
+      left: var(--borderSize);
+      width: 100%;
+      height: 100%;
+      background-color: var(--backgroundColor);
+      border-radius: var(--borderSize);
+    }
+
+    .borderBottomRight {
+      margin-right: calc(var(--borderSize) * -1);
+      margin-bottom: calc(var(--borderSize) * -1);
+      bottom: 0;
+      right: 0;
+    }
+
+    .borderBottomRight:after {
+      content: "";
+      position: absolute;
+      bottom: var(--borderSize);
+      right: var(--borderSize);
+      width: 100%;
+      height: 100%;
+      background-color: var(--backgroundColor);
+      border-radius: var(--borderSize);
+    }
+
+    .innerContent {
+      display: grid;
+      grid-template-rows: 50px 1fr 50px;
+      grid-template-areas: "header" "main" "footer";
+      height: 100%;
+      align-items: center;
+      background: var(--backgroundColor);
+
+      .header {
+        grid-area: header;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .headerIcons {
+          height: 30px;
+          transition: transform 0.2s ease-in-out;
+          cursor: pointer;
+        }
+
+        .headerIcons:hover {
+          transform: scale(1.2);
+        }
+
+        .home {
+          content: url("/assets/svg/home-icon.svg");
+        }
+
+        .headerLinks {
+          display: flex;
+          gap: 30px;
+          align-items: center;
+
+          .gitHub {
+            content: url("/assets/svg/github-mark-white.svg");
+          }
+
+          .mail {
+            content: url("/assets/svg/mail.svg");
+          }
+        }
+      }
+
+      .mainWrapper {
+        grid-area: main;
+        width: 100%;
+        user-select: none;
+        display: flex;
+        justify-content: space-between;
+
+        .aboutWrapper {
+          width: 55%;
+
+          .welcomeText {
+            letter-spacing: 3px;
+            overflow: hidden;
+            font-size: min(5vw, 90px);
+            padding-bottom: 5px;
+            padding-top: 5px;
+            white-space: nowrap;
+            border-right: 3px solid transparent;
+            margin: 0 auto;
+            animation: typing 2s steps(11, end), blink-caret .8s step-end 5;
+          }
+
+          .aboutText {
+            border-left: 2px solid var(--fontColor);
+            border-image: var(--colorGradient) 1;
+            padding-left: 20px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+          }
+        }
+
+        .projectWrapper {
+          width: 30%;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          .projectHeader {
+            font-size: 30px;
+            width: fit-content;
+          }
+
+          .projectList {
+            position: relative;
+            z-index: 3;
+
+            .border {
+              height: 50%;
+              width: 50%;
+            }
+
+            .borderTopLeft {
+              z-index: -1;
+              margin-left: -2px;
+              margin-top: -2px;
+            }
+
+            .borderTopLeft:after {
+              top: 2px;
+              left: 2px;
+              border-bottom-left-radius: 0;
+              border-top-right-radius: 0;
+            }
+
+            .list {
+              max-height: 20vh;
+              overflow-y: auto;
+              font-size: 20px;
+
+              ul {
+                list-style-type: none;
+
+                li {
+                  padding: 10px;
+                  width: fit-content;
+                  transition: transform 0.2s ease-in-out;
+                  border-radius: 20px;
+
+                  a{
+                    color: var(--fontColor);
+                    text-decoration: none;
+                    position: relative;
+                  }
+
+                  a::before {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    width: 100%;
+                    left: 0;
+                    height: 1px;
+                    background: var(--colorGradient);
+                    background-size: 300% 300%;
+                    animation: gradientAnimation 5s infinite alternate;
+                  }
+                }
+
+                li:hover{
+                  transform: scale(1.1);
+                  background-color: var(--fontColor);
+                }
+
+                li:hover a, a:before{
+                  color: var(--backgroundColor);
+                  font-weight: bold;
+                }
+
+                li:hover a:before{
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .footer {
+        grid-area: footer;
+        justify-self: end;
+        user-select: none;
+      }
+    }
+  }
+}
+
+#cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--fontColor);
+  pointer-events: none;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out, width 0.1s ease-in-out, height 0.1s ease-in-out;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  z-index: 3;
+}
+
+
+.bigCursor {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.hoverCursor {
+  width: 50px !important;
+  height: 50px !important;
+  background-color: var(--fontColor) !important;
+  border: none !important;
+}
