@@ -1,0 +1,46 @@
+<div class="content" (mousemove)="log($event)" (mouseleave)="hideMouse()" (mousedown)="changeMouse(true)"
+     (mouseup)="changeMouse(false)">
+  <div class="innerContentWrapper">
+    <div class="border borderTopLeft"></div>
+    <div class="border borderBottomRight"></div>
+    <div class="innerContent">
+      <div class="header">
+        <div class="headerIcons home" (mouseenter)="mouseEnterText()" (mouseleave)="mouseLeaveText()"></div>
+        <div class="headerLinks">
+          <a class="headerIcons gitHub" href="https://github.com/FlorianGenz" target="_blank"
+             (mouseenter)="mouseEnterText()" (mouseleave)="mouseLeaveText()"></a>
+          <a class="headerIcons mail" href="mailto:floriangenz2002@gmail.com" (mouseenter)="mouseEnterText()"
+             (mouseleave)="mouseLeaveText()"></a>
+        </div>
+      </div>
+      <div class="mainWrapper">
+        <div class="aboutWrapper">
+          <div class="welcomeText" (mouseenter)="mouseEnterText()" (mouseleave)="mouseLeaveText()">
+            <div>Willkommen.</div>
+          </div>
+          <div class="aboutText" (mouseenter)="mouseEnterText()" (mouseleave)="mouseLeaveText()">
+            Hi, mein Name ist Florian und ich bin angehender Softwareentwickler.
+            <br>
+            Ich code gerne kleinere Projekte (hauptsächlich mit dem Framework Angular).
+            <br>
+            Eine Auswahl meiner Projekte kannst du dir hier gerne anschauen :)
+          </div>
+        </div>
+        <div class="projectWrapper">
+          <div class="projectHeader" (mouseenter)="mouseEnterText()" (mouseleave)="mouseLeaveText()">Projekte</div>
+          <div class="projectList">
+            <div class="border borderTopLeft"></div>
+            <div class="list">
+              <ul>
+                <li><a href="https://wetterinmagdeburg.netlify.app" target="_blank">Wetter-App</a></li>
+                <li><a href="https://pongfg.netlify.app" target="_blank">Pong</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer" (mouseenter)="mouseEnterText()" (mouseleave)="mouseLeaveText()">Florian Genz</div>
+    </div>
+  </div>
+</div>
+<span id="cursor"></span>
