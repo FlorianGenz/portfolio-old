@@ -46,6 +46,7 @@
       height: 100%;
       background-color: var(--backgroundColor);
       border-radius: var(--borderSize);
+      transition: background-color 0.5s ease-in-out;
     }
 
     .borderBottomRight {
@@ -64,6 +65,7 @@
       height: 100%;
       background-color: var(--backgroundColor);
       border-radius: var(--borderSize);
+      transition: background-color 0.5s ease-in-out;
     }
 
     .innerContent {
@@ -72,7 +74,8 @@
       grid-template-areas: "header" "main" "footer";
       height: 100%;
       align-items: center;
-      background: var(--backgroundColor);
+      background-color: var(--backgroundColor);
+      transition: background-color 0.5s ease-in-out;
 
       .header {
         grid-area: header;
@@ -81,7 +84,7 @@
         align-items: center;
 
         .headerIcons {
-          height: 30px;
+          max-height: 30px;
           transition: transform 0.2s ease-in-out;
           cursor: pointer;
         }
@@ -90,8 +93,8 @@
           transform: scale(1.2);
         }
 
-        .home {
-          content: url("/assets/svg/home-icon.svg");
+        #home {
+          content: url("/assets/svg/home-iconWhite.svg");
         }
 
         .headerLinks {
@@ -99,12 +102,16 @@
           gap: 30px;
           align-items: center;
 
-          .gitHub {
-            content: url("/assets/svg/github-mark-white.svg");
+          #gitHub {
+            content: url("/assets/svg/gitHubWhite.svg");
           }
 
-          .mail {
-            content: url("/assets/svg/mail.svg");
+          #mail {
+            content: url("/assets/svg/mailWhite.svg");
+          }
+
+          #darkBrightMode {
+            content: url("/assets/svg/sunWhite.svg");
           }
         }
       }

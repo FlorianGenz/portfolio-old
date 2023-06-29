@@ -1,5 +1,5 @@
 :root {
-  --fontColor: #adadad;
+  --fontColor: #DEDEDE;
   --fontFamily: 'Courier New', monospace;
   --backgroundColor: #232323;
   //--colorGradient: linear-gradient(45deg, #c3ccd1, #5fa397, #236c66, #163651, #141c32);
@@ -15,6 +15,7 @@ html, body {
   background-color: var(--backgroundColor);
   overflow: hidden;
   font-family: var(--fontFamily);
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
 @keyframes gradientAnimation {
