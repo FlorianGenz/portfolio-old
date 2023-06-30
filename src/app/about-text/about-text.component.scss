@@ -1,0 +1,24 @@
+.welcomeText {
+  width: fit-content;
+
+  div{
+    width: 100%;
+    letter-spacing: 3px;
+    overflow: hidden;
+    font-size: min(max(30px, 4vw), 90px);
+    padding-bottom: 5px;
+    padding-top: 5px;
+    white-space: nowrap;
+    border-right: 3px solid transparent;
+    margin: 0 auto;
+    animation: typing 2s steps(11, end), blink-caret .8s step-end 5;
+  }
+}
+
+.aboutText {
+  border-left: 2px solid var(--fontColor);
+  border-image: var(--mainGradient) 1;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}

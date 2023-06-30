@@ -1,15 +1,27 @@
 import {Component, OnInit} from '@angular/core';
+import {animate, style, transition, trigger} from "@angular/animations";
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  styleUrls: ['./portfolio.component.scss'],
+  animations: [
+    trigger('fade', [
+      transition(':enter', [
+        style({ opacity: 0, height: 0}),
+        animate(300, style({ opacity: 1, height: "100%" })),
+      ]),
+      transition(':leave', [
+        style({ display: "none" }),
+        animate(300, style({ display: "none" }))
+      ])
+    ])
+  ]
 })
 export class PortfolioComponent implements OnInit{
 
-
-
   darkmode: boolean = true;
+  content: string = "main";
 
   ngOnInit(): void {
     if (localStorage.getItem("theme") != null && localStorage.getItem("theme") != "dark") {

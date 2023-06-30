@@ -5,7 +5,7 @@
     <div class="border borderBottomRight"></div>
     <div class="innerContent">
       <div class="header">
-        <div class="headerIcons" id="home" (mouseenter)="mouseEnterText()" (mouseleave)="mouseLeaveText()"></div>
+        <div class="headerIcons" id="home" (mouseenter)="mouseEnterText()" (mouseleave)="mouseLeaveText()" (click)="content = 'main'"></div>
         <div class="headerLinks">
           <a class="headerIcons" id="gitHub" href="https://github.com/FlorianGenz" target="_blank"
              (mouseenter)="mouseEnterText()" (mouseleave)="mouseLeaveText()"></a>
@@ -17,16 +17,9 @@
       </div>
       <div class="mainWrapper">
         <div class="aboutWrapper">
-          <div class="welcomeText" (mouseenter)="mouseEnterText()" (mouseleave)="mouseLeaveText()">
-            <div>Willkommen.</div>
-          </div>
-          <div class="aboutText" (mouseenter)="mouseEnterText()" (mouseleave)="mouseLeaveText()">
-            Hi, mein Name ist Florian und ich bin angehender Softwareentwickler.
-            <br>
-            Ich code gerne kleinere Projekte (hauptsächlich mit dem Framework Angular).
-            <br>
-            Eine Auswahl meiner Projekte kannst du dir hier gerne anschauen :)
-          </div>
+          <app-about-text @fade *ngIf="content === 'main'"></app-about-text>
+          <app-weather-app-text @fade *ngIf="content === 'weather'"></app-weather-app-text>
+          <app-pong-text @fade *ngIf="content === 'pong'"></app-pong-text>
         </div>
         <div class="projectWrapper">
           <div class="projectHeader" (mouseenter)="mouseEnterText()" (mouseleave)="mouseLeaveText()">Projekte</div>
@@ -34,8 +27,8 @@
             <div class="border borderTopLeft"></div>
             <div class="list">
               <ul>
-                <li><a href="https://wetterinmagdeburg.netlify.app" target="_blank">Wetter-App</a></li>
-                <li><a href="https://pongfg.netlify.app" target="_blank">Pong</a></li>
+                <li><a (click)="content = 'weather'">Wetter-App</a></li>
+                <li><a (click)="content = 'pong'">Pong</a></li>
               </ul>
             </div>
           </div>

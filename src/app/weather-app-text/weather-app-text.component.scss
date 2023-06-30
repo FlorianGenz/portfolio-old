@@ -1,0 +1,23 @@
+.weatherAppTextWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+
+  .weatherAppImg {
+    width: min(80%, 300px);
+    height: auto;
+    border-radius: 20px;
+  }
+
+  .weatherAppText {
+    border-left: 2px solid var(--fontColor);
+    border-image: var(--mainGradient) 1;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+}
+
