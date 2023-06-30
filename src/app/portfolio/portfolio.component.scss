@@ -76,6 +76,7 @@
       align-items: center;
       background-color: var(--backgroundColor);
       transition: background-color 0.5s ease-in-out;
+      animation: 0.8s hideContent;
 
       .header {
         grid-area: header;

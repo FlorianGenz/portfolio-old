@@ -1,9 +1,9 @@
 <div class="content" (mousemove)="log($event)" (mouseleave)="hideMouse()" (mousedown)="changeMouse(true)"
      (mouseup)="changeMouse(false)">
-  <div class="innerContentWrapper">
+  <div class="innerContentWrapper" @inAnimation>
     <div class="border borderTopLeft"></div>
     <div class="border borderBottomRight"></div>
-    <div class="innerContent">
+    <div class="innerContent" @hideContent>
       <div class="header">
         <div class="headerIcons" id="home" (mouseenter)="mouseEnterText()" (mouseleave)="mouseLeaveText()" (click)="content = 'main'"></div>
         <div class="headerLinks">
@@ -27,8 +27,8 @@
             <div class="border borderTopLeft"></div>
             <div class="list">
               <ul>
-                <li><a (click)="content = 'weather'">Wetter-App</a></li>
-                <li><a (click)="content = 'pong'">Pong</a></li>
+                <li (click)="content = 'weather'"><a>Wetter-App</a></li>
+                <li (click)="content = 'pong'"><a>Pong</a></li>
               </ul>
             </div>
           </div>

@@ -15,6 +15,13 @@ import {animate, style, transition, trigger} from "@angular/animations";
         style({ display: "none" }),
         animate(300, style({ display: "none" }))
       ])
+    ]),
+    trigger('inAnimation', [
+      transition(':enter', [
+        style({ width: 0, height: 0}),
+        animate("0.3s ease-in-out", style({ width: "0", height: "100%" })),
+        animate("0.3s ease-in-out", style({width: "100vw", height: "100%"}))
+      ])
     ])
   ]
 })
