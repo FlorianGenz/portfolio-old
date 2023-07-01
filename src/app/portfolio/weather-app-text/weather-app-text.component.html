@@ -1,10 +1,19 @@
 <div class="projectPreviewWrapper">
-    <img class="projectPreviewImg" src="../../../assets/img/wetterApp_Screenshot.PNG" alt="weatherAppScreenshot" (mouseenter)="portfolio.mouseEnterText()" (mouseleave)="portfolio.mouseLeaveText()">
-  <div class="infoText" (mouseenter)="portfolio.mouseEnterText()" (mouseleave)="portfolio.mouseLeaveText()">
+  <img class="projectPreviewImg" src="../../../assets/img/wetterApp_Screenshot.PNG" alt="weatherAppScreenshot"
+       (mouseenter)="portfolio.mouseEnterText()" (mouseleave)="portfolio.mouseLeaveText()">
+  <div class="projectPreviewText" (mouseenter)="portfolio.mouseEnterText()" (mouseleave)="portfolio.mouseLeaveText()">
     Mein erstes eigenes Angular Projekt ist diese Wetter-App.
     <br>
     Mittels API-Requests (OpenWeather) werden alle Daten geladen.
     <br>
     Der User kann sich dabei aussuchen, von welcher Stadt er die Wetterdaten abrufen möchte.
+  </div>
+  <div class="projectPreviewButtons">
+    <div class="projectPreviewButton">
+      <a href="https://github.com/FlorianGenz/wetterApp" target="_blank">Github</a>
+    </div>
+    <div class="projectPreviewButton">
+      <a href="https://wetterinmagdeburg.netlify.app" target="_blank">Seite besuchen</a>
+    </div>
   </div>
 </div>

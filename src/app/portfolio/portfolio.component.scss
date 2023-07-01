@@ -183,25 +183,6 @@
                   width: fit-content;
                   transition: background-color 0.2s ease-in-out;
                   border-radius: 20px;
-
-                  a {
-                    color: var(--fontColor);
-                    text-decoration: none;
-                    position: relative;
-                    transition: color 0.2s ease-in-out;
-                  }
-
-                  a::before {
-                    content: "";
-                    position: absolute;
-                    top: 100%;
-                    width: 100%;
-                    left: 0;
-                    height: 1px;
-                    background: var(--mainGradient);
-                    background-size: 300% 300%;
-                    animation: gradientAnimation 5s infinite alternate;
-                  }
                 }
 
                 li:hover {
@@ -239,13 +220,14 @@
   align-items: center;
   gap: 20px;
   width: 100%;
+  padding-bottom: 5px;
 
   .projectPreviewImg {
     width: min(80%, 300px);
     height: auto;
     border-radius: 20px;
   }
-  .infoText {
+  .projectPreviewText {
     border-left: 2px solid var(--fontColor);
     border-image: var(--mainGradient) 1;
     padding-left: 20px;
@@ -253,6 +235,52 @@
     padding-top: 5px;
   }
 
+  .projectPreviewButtons{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    .projectPreviewButton{
+      padding: 10px;
+      width: fit-content;
+      transition: background-color 0.2s ease-in-out;
+      border-radius: 20px;
+      font-size: 20px;
+    }
+
+    .projectPreviewButton:hover{
+      background-color: var(--fontColor);
+      cursor: pointer;
+    }
+
+    .projectPreviewButton:hover a, a:before {
+      color: var(--backgroundColor);
+      font-weight: bold;
+    }
+
+    .projectPreviewButton:hover a:before{
+      display: none;
+    }
+  }
+}
+
+:host::ng-deep a {
+  color: var(--fontColor);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease-in-out;
+}
+
+:host::ng-deep a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  height: 1px;
+  background: var(--mainGradient);
+  background-size: 300% 300%;
+  animation: gradientAnimation 5s infinite alternate;
 }
 
 #cursor {
