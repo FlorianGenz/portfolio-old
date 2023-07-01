@@ -140,6 +140,7 @@
           flex-direction: column;
           gap: 20px;
           align-self: center;
+          padding-left: 2px;
 
           .projectHeader {
             font-size: min(max(25px, 3vw), 30px);
@@ -231,6 +232,29 @@
   }
 }
 
+:host ::ng-deep .projectPreviewWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+
+  .projectPreviewImg {
+    width: min(80%, 300px);
+    height: auto;
+    border-radius: 20px;
+  }
+  .infoText {
+    border-left: 2px solid var(--fontColor);
+    border-image: var(--mainGradient) 1;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+
+}
+
 #cursor {
   position: absolute;
   width: 20px;
@@ -266,7 +290,6 @@
 
         .mainWrapper {
           gap: 50px;
-          justify-content: center;
 
           .aboutWrapper{
             width: 100%;

@@ -5,9 +5,9 @@ import { BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { AboutTextComponent } from './about-text/about-text.component';
-import { WeatherAppTextComponent } from './weather-app-text/weather-app-text.component';
-import { PongTextComponent } from './pong-text/pong-text.component';
+import { AboutTextComponent } from './portfolio/about-text/about-text.component';
+import { WeatherAppTextComponent } from './portfolio/weather-app-text/weather-app-text.component';
+import { PongTextComponent } from './portfolio/pong-text/pong-text.component';
 
 @NgModule({
   declarations: [
