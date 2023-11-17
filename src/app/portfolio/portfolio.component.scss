@@ -23,11 +23,7 @@
       height: 30%;
       display: block;
       pointer-events: none;
-      border-radius: var(--borderSize);
       z-index: -1;
-      background: var(--mainGradient);
-      background-size: 300% 300%;
-      animation: gradientAnimation 5s infinite alternate;
     }
 
     .borderTopLeft {
@@ -35,18 +31,11 @@
       margin-top: calc(var(--borderSize) * -1);
       top: 0;
       left: 0;
-    }
-
-    .borderTopLeft:after {
-      content: "";
-      position: absolute;
-      top: var(--borderSize);
-      left: var(--borderSize);
-      width: 100%;
-      height: 100%;
-      background-color: var(--backgroundColor);
-      border-radius: var(--borderSize);
-      transition: background-color 0.5s ease-in-out;
+      border-left: var(--borderSize) solid var(--mainGradient);
+      border-top: var(--borderSize) solid var(--mainGradient);
+      border-right: var(--borderSize) solid transparent;
+      border-bottom: var(--borderSize) solid transparent;
+      border-top-left-radius: var(--borderSize);
     }
 
     .borderBottomRight {
@@ -54,18 +43,11 @@
       margin-bottom: calc(var(--borderSize) * -1);
       bottom: 0;
       right: 0;
-    }
-
-    .borderBottomRight:after {
-      content: "";
-      position: absolute;
-      bottom: var(--borderSize);
-      right: var(--borderSize);
-      width: 100%;
-      height: 100%;
-      background-color: var(--backgroundColor);
-      border-radius: var(--borderSize);
-      transition: background-color 0.5s ease-in-out;
+      border-right: var(--borderSize) solid var(--mainGradient);
+      border-bottom: var(--borderSize) solid var(--mainGradient);
+      border-left: var(--borderSize) solid transparent;
+      border-top: var(--borderSize) solid transparent;
+      border-bottom-right-radius: var(--borderSize);
     }
 
     .innerContent {
@@ -74,7 +56,6 @@
       grid-template-areas: "header" "main" "footer";
       height: 100%;
       align-items: center;
-      background-color: var(--backgroundColor);
       transition: background-color 0.5s ease-in-out;
       animation: 0.8s hideContent;
 
@@ -157,16 +138,12 @@
             }
 
             .borderTopLeft {
-              z-index: -1;
               margin-left: -2px;
               margin-top: -2px;
-            }
-
-            .borderTopLeft:after {
-              top: 2px;
-              left: 2px;
-              border-bottom-left-radius: 0;
-              border-top-right-radius: 0;
+              border-top: calc(var(--borderSize) / 2) solid var(--mainGradient);
+              border-left: calc(var(--borderSize) / 2) solid var(--mainGradient);
+              border-right: calc(var(--borderSize) / 2) solid transparent;
+              border-bottom: calc(var(--borderSize) / 2) solid transparent;
             }
 
             .list {
@@ -206,7 +183,7 @@
 
       .footer {
         grid-area: footer;
-        justify-self: end;
+        justify-self: center;
         user-select: none;
       }
     }
