@@ -1,0 +1,17 @@
+<div class="projects">
+  <h1>Projekte</h1>
+  <div class="projectWrapper">
+    <div class="project" id="weatherApp" [ngStyle]="{'display': slideIndex == 0 ? 'block' : 'none'}" (click)="router.navigate(['weatherApp'])">
+      <div class="projectFadeGradient">
+        <h2>Wetter-App</h2>
+      </div>
+    </div>
+    <div class="project" id="pong" [ngStyle]="{'display': slideIndex == 1 ? 'block' : 'none'}" (click)="router.navigate(['pong'])">
+      <div class="projectFadeGradient">
+        <h2>Pong</h2>
+      </div>
+    </div>
+    <button class="projectButton left" (click)="plusSlides(-1)"><</button>
+    <button class="projectButton right" (click)="plusSlides(+1)">></button>
+  </div>
+</div>

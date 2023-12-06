@@ -5,36 +5,19 @@
     <div class="border borderBottomRight"></div>
     <div class="innerContent" @hideContent>
       <div class="header">
-        <div class="headerIcons" id="home" (mouseenter)="mouseEnterText()" (mouseleave)="mouseLeaveText()" (click)="content = 'main'"></div>
+        <div class="headerIcons" id="home" (mouseenter)="mouseEnterText()" (mouseleave)="mouseLeaveText()" (click)="router.navigate([''])"></div>
         <div class="headerLinks">
           <a class="headerIcons" id="gitHub" href="https://github.com/FlorianGenz" target="_blank"
              (mouseenter)="mouseEnterText()" (mouseleave)="mouseLeaveText()"></a>
           <a class="headerIcons" id="mail" href="mailto:floriangenz2002@gmail.com" (mouseenter)="mouseEnterText()"
              (mouseleave)="mouseLeaveText()"></a>
-          <a class="headerIcons" id="darkLightMode" (click)="changeBrightnessMode()" (mouseenter)="mouseEnterText()"
-             (mouseleave)="mouseLeaveText()"></a>
+         <!-- <a class="headerIcons" id="darkLightMode" (click)="changeBrightnessMode()" (mouseenter)="mouseEnterText()"
+             (mouseleave)="mouseLeaveText()"></a> -->
         </div>
       </div>
-      <div class="mainWrapper">
-        <div class="aboutWrapper">
-          <app-about-text @fade *ngIf="content === 'main'"></app-about-text>
-          <app-weather-app-text @fade *ngIf="content === 'weather'"></app-weather-app-text>
-          <app-pong-text @fade *ngIf="content === 'pong'"></app-pong-text>
-        </div>
-        <div class="projectWrapper">
-          <div class="projectHeader" (mouseenter)="mouseEnterText()" (mouseleave)="mouseLeaveText()">Projekte</div>
-          <div class="projectList">
-            <div class="border borderTopLeft"></div>
-            <div class="list">
-              <ul>
-                <li (click)="content = 'weather'"><a>Wetter-App</a></li>
-                <li (click)="content = 'pong'"><a>Pong</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <div class="routerContent">
+      <router-outlet></router-outlet>
       </div>
-      <div class="footer" (mouseenter)="mouseEnterText()" (mouseleave)="mouseLeaveText()">by Florian Genz</div>
     </div>
   </div>
 </div>

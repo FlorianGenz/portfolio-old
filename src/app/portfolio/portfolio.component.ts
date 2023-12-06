@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {animate, style, transition, trigger} from "@angular/animations";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-portfolio',
@@ -28,7 +29,9 @@ import {animate, style, transition, trigger} from "@angular/animations";
 export class PortfolioComponent implements OnInit{
 
   darkmode: boolean = true;
-  content: string = "main";
+
+  constructor(public router: Router) {
+  }
 
   ngOnInit(): void {
     if (localStorage.getItem("theme") != null && localStorage.getItem("theme") != "dark") {

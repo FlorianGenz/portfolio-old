@@ -5,9 +5,13 @@ import { BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { AboutTextComponent } from './portfolio/about-text/about-text.component';
-import { WeatherAppTextComponent } from './portfolio/weather-app-text/weather-app-text.component';
-import { PongTextComponent } from './portfolio/pong-text/pong-text.component';
+import { AboutTextComponent } from './portfolio/main-page/about-text/about-text.component';
+import { WeatherAppTextComponent } from './weather-app-text/weather-app-text.component';
+import { PongTextComponent } from './pong-text/pong-text.component';
+import { ProjectsComponent } from './portfolio/main-page/projects/projects.component';
+import {NgOptimizedImage} from "@angular/common";
+import {provideRouter} from "@angular/router";
+import { MainPageComponent } from './portfolio/main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -15,14 +19,17 @@ import { PongTextComponent } from './portfolio/pong-text/pong-text.component';
     PortfolioComponent,
     AboutTextComponent,
     WeatherAppTextComponent,
-    PongTextComponent
+    PongTextComponent,
+    ProjectsComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgOptimizedImage
   ],
-  providers: [],
+  providers: [PortfolioComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
