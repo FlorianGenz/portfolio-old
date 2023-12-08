@@ -8,7 +8,7 @@
     height: 100%;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     align-items: center;
 
     .aboutWrapper {
@@ -17,9 +17,21 @@
     }
 
     .profile{
-      content: url("/assets/svg/profile-user.svg");
+      background-image: url("/assets/img/Profile_Picture.png");
+      background-size: 100% 100%;
       max-width: 200px;
-      width: 25vw;
+      max-height: 200px;
+      width: 40vw;
+      height: 40vw;
+      border-radius: 50%;
+      border: 3px solid;
+      border-color: var(--fontColor);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .profile:hover{
+      transform: scale(1.1);
+      border-color: var(--mainGradient);
     }
   }
 
@@ -29,9 +41,22 @@
     padding: 15px;
     margin-top: 150px;
     display: flex;
-    justify-content: center;
     background-color: var(--surfaceColor);
     border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+
+    .footerRow1{
+      display: flex;
+      gap: 7px;
+
+      .footerRow11:hover{
+        text-decoration-line: underline;
+        cursor: pointer;
+      }
+    }
   }
 
 // .whiteBlur{

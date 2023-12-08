@@ -6,6 +6,15 @@
     <div class="profile"></div>
   </div>
   <app-projects></app-projects>
-  <div class="footer"><strong>by Florian Genz</strong></div>
+  <div class="footer">
+    <div class="footerRow1">
+      <div class="footerRow11" (click)="router.navigate(['legalNotice'])">Impressum</div>
+      <div>|</div>
+      <div class="footerRow11" (click)="router.navigate(['privacyPolicy'])">Datenschutz</div>
+    </div>
+    <div>
+      Copyright © 2023 | All rights reserved.
+    </div>
+  </div>
   <div class="whiteBlur"></div>
 </div>

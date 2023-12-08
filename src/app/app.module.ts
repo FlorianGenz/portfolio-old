@@ -1,17 +1,18 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { AboutTextComponent } from './portfolio/main-page/about-text/about-text.component';
-import { WeatherAppTextComponent } from './weather-app-text/weather-app-text.component';
-import { PongTextComponent } from './pong-text/pong-text.component';
-import { ProjectsComponent } from './portfolio/main-page/projects/projects.component';
-import {NgOptimizedImage} from "@angular/common";
-import {provideRouter} from "@angular/router";
-import { MainPageComponent } from './portfolio/main-page/main-page.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {PortfolioComponent} from './portfolio/portfolio.component';
+import {AboutTextComponent} from './portfolio/main-page/about-text/about-text.component';
+import {WeatherAppTextComponent} from './portfolio/weather-app-text/weather-app-text.component';
+import {PongTextComponent} from './portfolio/pong-text/pong-text.component';
+import {ProjectsComponent} from './portfolio/main-page/projects/projects.component';
+import {MainPageComponent} from './portfolio/main-page/main-page.component';
+import {MatIconModule} from "@angular/material/icon";
+import { LegalNoticeComponent } from './portfolio/legal-notice/legal-notice.component';
+import { PrivacyPolicyComponent } from './portfolio/privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
@@ -21,15 +22,18 @@ import { MainPageComponent } from './portfolio/main-page/main-page.component';
     WeatherAppTextComponent,
     PongTextComponent,
     ProjectsComponent,
-    MainPageComponent
+    MainPageComponent,
+    LegalNoticeComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    NgOptimizedImage
+    MatIconModule
   ],
   providers: [PortfolioComponent],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

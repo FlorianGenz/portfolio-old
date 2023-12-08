@@ -29,6 +29,9 @@ import {Router} from "@angular/router";
 export class PortfolioComponent implements OnInit{
 
   darkmode: boolean = true;
+  emailFirstPart: string = "kontakt";
+  emailSecondPart: string = "floriangenz";
+  emailThirdPart: string = "de"
 
   constructor(public router: Router) {
   }

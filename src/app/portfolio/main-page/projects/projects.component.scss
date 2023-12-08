@@ -14,17 +14,6 @@
       position: absolute;
       top: 50%;
       transform: translate(0, -50%);
-      border: 2px solid var(--mainGradient);
-      background: transparent;
-      border-radius: 5px;
-      padding: 10px;
-      color: var(--fontColor);
-      transition: all 0.1s ease-in-out;
-    }
-
-    .projectButton:hover{
-      background: var(--mainGradient);
-      color: var(--backgroundColor);
     }
 
     .left{
@@ -36,10 +25,10 @@
     }
 
     .project{
-      max-height: 300px;
-      max-width: 500px;
-      width: 60vw;
-      height: calc(60vw * 0.7);
+      max-height: 270px;
+      max-width: 400px;
+      width: 50vw;
+      height: calc(50vw * 0.7);
       border-radius: 20px;
       background-size: 100% 100%;
       background-position: center;
@@ -48,15 +37,15 @@
 
       .projectFadeGradient{
         position: absolute;
-        bottom: 0;
+        bottom: -2px;
         width: 100%;
-        height: 90%;
-        background: linear-gradient(rgba(255, 255, 255, 0), var(--backgroundColor) 90%);
+        height: 100%;
+        background: linear-gradient(rgba(255, 255, 255, 0), var(--backgroundColor) 87%);
         display: flex;
-        align-items: end;
+        align-items: flex-end;
 
-        h2{
-          padding: 30px;
+        h3{
+          padding: 20px;
         }
       }
     }
