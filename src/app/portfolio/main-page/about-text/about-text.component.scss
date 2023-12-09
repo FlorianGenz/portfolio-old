@@ -1,8 +1,8 @@
 .welcomeText {
   width: fit-content;
 
-  div{
-    width: 100%;
+  div {
+    width: 0;
     letter-spacing: 3px;
     overflow: hidden;
     font-size: min(max(35px, 4vw), 90px);
@@ -12,14 +12,17 @@
     white-space: nowrap;
     border-right: 3px solid transparent;
     margin: 0 auto;
-    animation: typing 3s steps(11, end), blink-caret 1.5s step-end 5;
+    animation: typing 3s forwards, blink-caret 1.5s step-end 5;
+    animation-delay: 0.4s;
   }
 }
 
-.projectPreviewText {
-  border-left: 2px solid var(--fontColor);
-  border-image: var(--accentColor) 1;
-  padding-left: 20px;
-  padding-bottom: 5px;
-  padding-top: 5px;
+.projectsScrollLink {
+  text-decoration-line: underline;
+  text-decoration-color: var(--accentColor);
 }
+
+.projectsScrollLink:hover{
+  cursor: pointer;
+}
+

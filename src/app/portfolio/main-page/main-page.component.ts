@@ -10,4 +10,12 @@ import {PortfolioComponent} from "../portfolio.component";
 export class MainPageComponent {
   constructor(public router: Router, public portfolio: PortfolioComponent) {
   }
+
+  scrollDown(){
+    document.getElementById("projects")!.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
+  }
 }

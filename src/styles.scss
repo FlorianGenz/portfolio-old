@@ -84,8 +84,18 @@ mat-icon{
 }
 
 @keyframes typing {
-  from {width: 0}
-  to {width: 100%}
+  0% {width: 0; display: block}
+  9.1% {width: 9.1%}      //W
+  18.2% {width: 18.2%}    //i
+  27.3% {width: 27.3%}    //l
+  36.4% {width: 36.4%}    //l
+  45.5% {width: 45.5%}    //k
+  54.6% {width: 53.6%}    //o
+  63.7% {width: 62.7%}    //m
+  72.8% {width: 72.8%}    //m
+  81.9% {width: 81.9%}    //e
+  91% {width: 91%}        //n
+  100% {width: 100%}      //.
 }
 
 @keyframes hideContent {
@@ -97,5 +107,33 @@ mat-icon{
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: var(--fontColor); }
+}
+
+
+
+//         ------------- Angular Material ---------------
+
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/mat-icons.woff2") format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
 }
 
