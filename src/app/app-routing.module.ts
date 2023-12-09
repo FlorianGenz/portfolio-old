@@ -8,6 +8,7 @@ import {ProjectComponent} from "./portfolio/project/project.component";
 const routes: Routes = [
   {path: 'Wetter-App', component: ProjectComponent},
   {path: 'Pong', component: ProjectComponent},
+  {path: 'TicTacToe', component: ProjectComponent},
   {path: 'legalNotice', component: LegalNoticeComponent},
   {path: 'privacyPolicy', component: PrivacyPolicyComponent},
   {path: '**' , component: MainPageComponent}

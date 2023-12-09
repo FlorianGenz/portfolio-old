@@ -24,6 +24,19 @@
         "gitHub": "https://github.com/FlorianGenz/pong",
         "website": "https://pongfg.netlify.app"
       }
+    },
+    {
+      "name": "TicTacToe",
+      "text": [
+        "Mein erstes Full-Stack Projekt ist TicTacToe.",
+        "Die eigens geschriebene API ist ein Java-Spring Backend und ermöglicht ein echtzeit Online-Spiel zwischen zwei Spielern.",
+        "Da das Backend von einem kostenlosen Anbieter gehostet wird, dauert es einige Sekunen, bis es startet und man spielen kann."
+      ],
+      "links": {
+        "img": "/assets/img/tictactoe_Screenshot.png",
+        "gitHub": "https://github.com/FlorianGenz/wetterApp",
+        "website": "https://tictactoefg.netlify.app"
+      }
     }
   ]
 }
