@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WeatherAppTextComponent } from './weather-app-text.component';
+import { ProjectComponent } from './project.component';
 
-describe('WeatherAppTextComponent', () => {
-  let component: WeatherAppTextComponent;
-  let fixture: ComponentFixture<WeatherAppTextComponent>;
+describe('ProjectComponent', () => {
+  let component: ProjectComponent;
+  let fixture: ComponentFixture<ProjectComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WeatherAppTextComponent ]
+      declarations: [ ProjectComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(WeatherAppTextComponent);
+    fixture = TestBed.createComponent(ProjectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

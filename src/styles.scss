@@ -3,10 +3,7 @@
   --fontFamily: 'Courier New', monospace;
   --backgroundColor: #181818;
   --surfaceColor: #2E2E2E;
-  //--minorGradient: linear-gradient(45deg, #c3ccd1, #5fa397, #236c66, #163651, #141c32);
-  //--mainGradient: linear-gradient(45deg, #e86af0, #ff00c1, #00fff9, #afffed, #ffffff);
-  --mainGradient: #FF9816;
-  --minorGradient: #387CBB;
+  --accentColor: #FF9816;
   --borderSize: min(1.5vw, 15px);
 }
 
@@ -22,7 +19,7 @@ html, body {
 }
 
 .highlightedText{
-  background-color: var(--mainGradient);
+  background-color: var(--accentColor);
   color: var(--backgroundColor);
   padding: 1px 7px;
   border-radius: 4px;
@@ -30,7 +27,7 @@ html, body {
 }
 
 button{
-  border: 2px solid var(--mainGradient);
+  border: 2px solid var(--accentColor);
   background: transparent;
   border-radius: 5px;
   padding: 5px;
@@ -40,16 +37,17 @@ button{
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: var(--fontFamily);
 }
 
 button:hover{
-  background: var(--mainGradient);
+  background: var(--accentColor);
   color: var(--backgroundColor);
   cursor: pointer;
 }
 
 a{
-  color: var(--mainGradient);
+  color: var(--accentColor);
 }
 
 mat-icon{
@@ -61,7 +59,7 @@ mat-icon{
 /* Firefox */
 * {
   scrollbar-width: auto;
-  scrollbar-color: var(--mainGradient) transparent;
+  scrollbar-color: var(--accentColor) transparent;
 }
 
 /* Chrome, Edge, and Safari */
@@ -75,7 +73,7 @@ mat-icon{
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: var(--mainGradient);
+  background-color: var(--accentColor);
   border-radius: 2px;
   border: none;
 }

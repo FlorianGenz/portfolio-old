@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
+import projects from "../../../../assets/projects.json";
 
 @Component({
   selector: 'app-projects',
@@ -23,5 +24,6 @@ export class ProjectsComponent {
     }
   }
 
+  protected readonly projects = projects;
 }
 

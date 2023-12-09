@@ -31,7 +31,7 @@
 
     .profile:hover{
       transform: scale(1.1);
-      border-color: var(--mainGradient);
+      border-color: var(--accentColor);
     }
   }
 
@@ -52,42 +52,9 @@
       display: flex;
       gap: 7px;
 
-      .footerRow11:hover{
+      .footerRow1Element:hover{
         text-decoration-line: underline;
         cursor: pointer;
-      }
-    }
-  }
-
-// .whiteBlur{
-  //  position: sticky;
-  //bottom: 0;
-  //  width: 100%;
-  //background-image: linear-gradient(rgba(255, 255, 255 ,0), rgba(255, 255, 255, 0.05));
-  //height: 60px;
-  //}
-
-}
-
-@media only screen and (max-width: 800px) {
-  .content {
-
-    .innerContentWrapper {
-
-      .innerContent {
-
-        .mainWrapper {
-          gap: 50px;
-
-          .aboutWrapper{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 30px;
-          }
-        }
       }
     }
   }

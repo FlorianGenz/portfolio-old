@@ -1,0 +1,19 @@
+<div class="projectPreviewWrapper">
+  <div class="projectDescription">
+    <div class="projectPreviewText" (mouseenter)="portfolio.mouseEnterText()" (mouseleave)="portfolio.mouseLeaveText()">
+      <div *ngFor="let text of project.text">
+        {{text}}
+      </div>
+    </div>
+    <img class="projectPreviewImg" src="{{project.links.img}}" alt="Bild konnte nicht geladen werden"
+         (mouseenter)="portfolio.mouseEnterText()" (mouseleave)="portfolio.mouseLeaveText()">
+  </div>
+  <div class="projectPreviewButtons">
+    <button class="projectPreviewButton"><a href="{{project.links.gitHub}}" target="_blank">
+      <mat-icon>open_in_new</mat-icon>
+      GitHub</a></button>
+    <button class="projectPreviewButton"><a href="{{project.links.website}}" target="_blank">
+      <mat-icon>open_in_new</mat-icon>
+      Seite besuchen</a></button>
+  </div>
+</div>

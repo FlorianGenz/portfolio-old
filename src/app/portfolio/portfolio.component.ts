@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {animate, style, transition, trigger} from "@angular/animations";
 import {Router} from "@angular/router";
 
@@ -26,20 +26,12 @@ import {Router} from "@angular/router";
     ])
   ]
 })
-export class PortfolioComponent implements OnInit{
-
-  darkmode: boolean = true;
+export class PortfolioComponent{
   emailFirstPart: string = "kontakt";
   emailSecondPart: string = "floriangenz";
   emailThirdPart: string = "de"
 
   constructor(public router: Router) {
-  }
-
-  ngOnInit(): void {
-    if (localStorage.getItem("theme") != null && localStorage.getItem("theme") != "dark") {
-      this.changeBrightnessMode();
-    }
   }
 
   public log(event: any) {
@@ -66,44 +58,5 @@ export class PortfolioComponent implements OnInit{
 
   mouseLeaveText(){
     document.getElementById("cursor")!.classList.remove("hoverCursor");
-  }
-
-  changeBrightnessMode(){
-    if (this.darkmode){
-      let tempBackgroundColor;
-      let tempGradient;
-      tempBackgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--backgroundColor");
-      tempGradient = getComputedStyle(document.documentElement).getPropertyValue("--mainGradient");
-      document.documentElement.style.setProperty("--backgroundColor", getComputedStyle(document.documentElement).getPropertyValue("--fontColor"));
-      document.documentElement.style.setProperty("--fontColor", tempBackgroundColor);
-      document.documentElement.style.setProperty("--mainGradient", getComputedStyle(document.documentElement).getPropertyValue("--minorGradient"));
-      document.documentElement.style.setProperty("--minorGradient", tempGradient);
-
-      document.getElementById("home")!.style.content = "url('/assets/svg/home-iconDark.svg')";
-      document.getElementById("gitHub")!.style.content = "url('/assets/svg/gitHubDark.svg')";
-      document.getElementById("mail")!.style.content = "url('/assets/svg/mailDark.svg')";
-      document.getElementById("darkLightMode")!.style.content = "url('/assets/svg/moon.svg')";
-
-      localStorage.setItem("theme", "light");
-      this.darkmode = false;
-    }else{
-      let tempBackgroundColor;
-      let tempGradient;
-      tempBackgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--backgroundColor");
-      tempGradient = getComputedStyle(document.documentElement).getPropertyValue("--mainGradient");
-      document.documentElement.style.setProperty("--backgroundColor", getComputedStyle(document.documentElement).getPropertyValue("--fontColor"));
-      document.documentElement.style.setProperty("--fontColor", tempBackgroundColor);
-
-      document.getElementById("home")!.style.content = "url('/assets/svg/home-iconWhite.svg')";
-      document.getElementById("gitHub")!.style.content = "url('/assets/svg/gitHubWhite.svg')";
-      document.getElementById("mail")!.style.content = "url('/assets/svg/mailWhite.svg')";
-      document.getElementById("darkLightMode")!.style.content = "url('/assets/svg/sun.svg')";
-      document.documentElement.style.setProperty("--mainGradient", getComputedStyle(document.documentElement).getPropertyValue("--minorGradient"));
-      document.documentElement.style.setProperty("--minorGradient", tempGradient);
-
-
-      localStorage.setItem("theme", "dark");
-      this.darkmode = true;
-    }
   }
 }

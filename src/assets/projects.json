@@ -1,0 +1,29 @@
+{
+  "projects": [
+    {
+      "name": "Wetter-App",
+      "text": [
+        "Mein erstes eigenes Angular Projekt ist diese Wetter-App.",
+        "Mittels API-Requests (OpenWeather) werden alle Daten geladen.",
+        "Der User kann sich dabei aussuchen, von welcher Stadt er die Wetterdaten abrufen möchte."
+      ],
+      "links": {
+        "img": "/assets/img/wetterApp_Screenshot.PNG",
+        "gitHub": "https://github.com/FlorianGenz/wetterApp",
+        "website": "https://wetterinmagdeburg.netlify.app"
+      }
+    },
+    {
+      "name": "Pong",
+      "text": [
+        "Das traditionelle Pong-Spiel mit eigenen Features.",
+        "Der Spieler spielt gegen einen Bot, dessen Schwierigkeit über die Knöpfe über dem Canvas eingestellt werden kann (3 Stufen)."
+      ],
+      "links": {
+        "img": "/assets/img/pong_Screenshot.PNG",
+        "gitHub": "https://github.com/FlorianGenz/pong",
+        "website": "https://pongfg.netlify.app"
+      }
+    }
+  ]
+}

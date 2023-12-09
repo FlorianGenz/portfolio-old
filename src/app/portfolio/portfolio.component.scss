@@ -31,8 +31,8 @@
       margin-top: calc(var(--borderSize) * -1);
       top: 0;
       left: 0;
-      border-left: var(--borderSize) solid var(--mainGradient);
-      border-top: var(--borderSize) solid var(--mainGradient);
+      border-left: var(--borderSize) solid var(--accentColor);
+      border-top: var(--borderSize) solid var(--accentColor);
       border-right: var(--borderSize) solid transparent;
       border-bottom: var(--borderSize) solid transparent;
       border-top-left-radius: var(--borderSize);
@@ -43,8 +43,8 @@
       margin-bottom: calc(var(--borderSize) * -1);
       bottom: 0;
       right: 0;
-      border-right: var(--borderSize) solid var(--mainGradient);
-      border-bottom: var(--borderSize) solid var(--mainGradient);
+      border-right: var(--borderSize) solid var(--accentColor);
+      border-bottom: var(--borderSize) solid var(--accentColor);
       border-left: var(--borderSize) solid transparent;
       border-top: var(--borderSize) solid transparent;
       border-bottom-right-radius: var(--borderSize);
@@ -80,7 +80,7 @@
         }
 
         #home {
-          content: url("/assets/svg/home-iconWhite.svg");
+          content: url("/assets/svg/home-icon.svg");
         }
 
         .headerLinks {
@@ -89,15 +89,11 @@
           align-items: center;
 
           #gitHub {
-            content: url("/assets/svg/gitHubWhite.svg");
+            content: url("/assets/svg/gitHub-icon.svg");
           }
 
           #mail {
-            content: url("/assets/svg/mailWhite.svg");
-          }
-
-          #darkLightMode {
-            content: url("/assets/svg/sun.svg");
+            content: url("/assets/svg/mail-icon.svg");
           }
         }
       }
@@ -136,7 +132,7 @@
     }
 
     .projectPreviewText {
-      border-left: 2px solid var(--mainGradient);
+      border-left: 2px solid var(--accentColor);
       padding-left: 20px;
       width: 40%;
       min-width: 300px;
@@ -193,28 +189,4 @@
   height: 50px !important;
   background-color: var(--fontColor) !important;
   border: none !important;
-}
-
-@media only screen and (max-width: 800px) {
-  .content {
-
-    .innerContentWrapper {
-
-      .innerContent {
-
-        .mainWrapper {
-          gap: 50px;
-
-          .aboutWrapper{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 30px;
-          }
-        }
-      }
-    }
-  }
 }
