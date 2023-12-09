@@ -1,0 +1,35 @@
+.skills {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+
+  .skillsWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .skillSet{
+      width: 250px;
+      background-color: var(--surfaceColor);
+      border-radius: 10px;
+      padding: 10px;
+      transition: all 0.2s ease-in-out;
+      border: 3px solid transparent;
+
+      h2{
+        transition: letter-spacing 0.2s ease-in-out;
+      }
+    }
+
+    .skillSet:hover{
+      border: 3px solid var(--accentColor);
+      h2{
+        letter-spacing: 2px;
+      }
+    }
+  }
+}

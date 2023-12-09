@@ -4,7 +4,7 @@
   gap: 40px;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 150px;
 
   .projectWrapper{
     display: flex;
@@ -13,28 +13,28 @@
 
     .projectButton{
       position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);
+      top: 40%;
+      //transform: translate(0, -50%);
     }
 
     .left{
-      left: -50px;
+      left: -15px;
     }
 
     .right{
-      right: -50px;
+      right: -15px;
     }
 
     .project{
       max-height: 270px;
-      max-width: 400px;
-      width: 50vw;
-      height: calc(50vw * 0.7);
-      border-radius: 20px;
+      max-width: 420px;
+      width: 70vw;
+      height: calc(70vw * 0.7);
+      border-radius: 10px;
       background-size: 100% 100%;
       background-position: center;
       position: relative;
-      transition: background-size 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
 
       .projectFadeGradient{
         position: absolute;
@@ -54,6 +54,7 @@
     .project:hover{
       background-size: 110% 110%;
       cursor: pointer;
+      letter-spacing: 2px;
     }
   }
 }

@@ -28,7 +28,7 @@ html, body {
 
 button{
   border: 2px solid var(--accentColor);
-  background: transparent;
+  background-color: var(--backgroundColor);
   border-radius: 5px;
   padding: 5px;
   color: var(--fontColor);
@@ -41,7 +41,7 @@ button{
 }
 
 button:hover{
-  background: var(--accentColor);
+  background-color: var(--accentColor);
   color: var(--backgroundColor);
   cursor: pointer;
 }

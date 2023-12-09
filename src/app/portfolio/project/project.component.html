@@ -1,8 +1,12 @@
 <div class="projectPreviewWrapper">
+  <h1>{{project.name}}</h1>
   <div class="projectDescription">
-    <div class="projectPreviewText" (mouseenter)="portfolio.mouseEnterText()" (mouseleave)="portfolio.mouseLeaveText()">
+    <div class="projectPreviewText" (mouseenter)="portfolio.mouseEnterText()"
+         (mouseleave)="portfolio.mouseLeaveText()">
       <div *ngFor="let text of project.text">
         {{text}}
+        <br>
+        <br>
       </div>
     </div>
     <img class="projectPreviewImg" src="{{project.links.img}}" alt="Bild konnte nicht geladen werden"

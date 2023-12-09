@@ -12,6 +12,7 @@ import {MatIconModule} from "@angular/material/icon";
 import { LegalNoticeComponent } from './portfolio/legal-notice/legal-notice.component';
 import { PrivacyPolicyComponent } from './portfolio/privacy-policy/privacy-policy.component';
 import { ProjectComponent } from './portfolio/project/project.component';
+import { SkillsComponent } from './portfolio/main-page/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProjectComponent } from './portfolio/project/project.component';
     MainPageComponent,
     LegalNoticeComponent,
     PrivacyPolicyComponent,
-    ProjectComponent
+    ProjectComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
