@@ -23,6 +23,16 @@
       h2{
         transition: letter-spacing 0.2s ease-in-out;
       }
+
+      ul{
+        list-style-type: none;
+        padding-left: 20px;
+
+        mat-icon{
+          color: var(--accentColor);
+          padding-top: 2px;
+        }
+      }
     }
 
     .skillSet:hover{

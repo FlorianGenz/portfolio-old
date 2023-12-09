@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {PortfolioComponent} from "../../portfolio.component";
 
 @Component({
   selector: 'app-skills',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
+
+  constructor(public portfolio: PortfolioComponent) {
+  }
 
 }

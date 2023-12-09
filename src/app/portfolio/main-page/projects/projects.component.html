@@ -1,8 +1,14 @@
 <div class="projects">
-  <h1>Projekte</h1>
+  <h1>
+    <mat-icon>whatshot</mat-icon>
+    Projekte
+    <mat-icon>whatshot</mat-icon>
+  </h1>
   <div class="projectWrapper">
-    <div class="project" *ngFor="let project of projects.projects; index as i" [style.background-image]="'url(' + project.links.img + ')'"
-         [ngStyle]="{'display': slideIndex == i ? 'block' : 'none'}" (click)="router.navigate([project.name])">
+    <div class="project" *ngFor="let project of projects.projects; index as i"
+         [style.background-image]="'url(' + project.links.img + ')'"
+         [ngStyle]="{'display': slideIndex == i ? 'block' : 'none'}" (click)="router.navigate([project.name])"
+         (mouseenter)="portfolio.mouseEnterText()" (mouseleave)="portfolio.mouseLeaveText()">
       <div class="projectFadeGradient">
         <h3>{{project.name}}</h3>
       </div>
