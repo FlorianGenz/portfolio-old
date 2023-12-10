@@ -84,7 +84,7 @@ mat-icon{
 }
 
 @keyframes typing {
-  0% {width: 0; display: block}
+  0% {width: 0}
   9.1% {width: 9.1%}      //W
   18.2% {width: 18.2%}    //i
   27.3% {width: 27.3%}    //l
@@ -94,8 +94,8 @@ mat-icon{
   63.7% {width: 62.7%}    //m
   72.8% {width: 72.8%}    //m
   81.9% {width: 81.9%}    //e
-  91% {width: 91%}        //n
-  100% {width: 100%}      //.
+  91.0% {width: 91.0%}    //n
+  100.0% {width: 100.0%}  //.
 }
 
 @keyframes hideContent {
@@ -105,8 +105,12 @@ mat-icon{
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--fontColor); }
+  from, to { border-color: var(--fontColor) }
+  60% { border-color: transparent; }
+  70% { border-color: var(--fontColor) }
+  80% { border-color: transparent }
+  90% { border-color: var(--fontColor) }
+  100% { border-color: transparent }
 }
 
 
