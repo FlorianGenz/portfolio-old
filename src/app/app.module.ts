@@ -13,6 +13,7 @@ import { LegalNoticeComponent } from './portfolio/legal-notice/legal-notice.comp
 import { PrivacyPolicyComponent } from './portfolio/privacy-policy/privacy-policy.component';
 import { ProjectComponent } from './portfolio/project/project.component';
 import { SkillsComponent } from './portfolio/main-page/skills/skills.component';
+import { BackgroundComponent } from './background/background.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SkillsComponent } from './portfolio/main-page/skills/skills.component';
     LegalNoticeComponent,
     PrivacyPolicyComponent,
     ProjectComponent,
-    SkillsComponent
+    SkillsComponent,
+    BackgroundComponent
   ],
   imports: [
     BrowserModule,
