@@ -5,7 +5,7 @@
     <mat-icon>whatshot</mat-icon>
   </h1>
   <div class="projectWrapper">
-    <div class="project" *ngFor="let project of projects.projects; index as i"
+    <div class="project" *ngFor="let project of projects; index as i"
          [style.background-image]="'url(' + project.links.img + ')'"
          [ngStyle]="{'display': slideIndex == i ? 'block' : 'none'}" (click)="router.navigate([project.name])"
          (mouseenter)="portfolio.mouseEnterText()" (mouseleave)="portfolio.mouseLeaveText()">

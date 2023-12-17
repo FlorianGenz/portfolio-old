@@ -25,15 +25,15 @@ export class ProjectComponent implements OnInit{
   ngOnInit() {
     let url = this.router.url;
     url = url.replaceAll("/", "");
-    let project = projects.projects.at(this.getProjectIndex(url));
+    let project = projects.at(this.getProjectIndex(url));
     this.project.name = project!.name;
     this.project.text = project!.text;
     this.project.links = project!.links;
   }
 
   getProjectIndex(name: string){
-    for (let i = 0; i < projects.projects.length; i++){
-      if (projects.projects.at(i)!.name == name){
+    for (let i = 0; i < projects.length; i++){
+      if (projects.at(i)!.name == name){
         return i;
       }
     }
